@@ -15,6 +15,8 @@
 		737CC78329D25B0000FDC5DC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC78229D25B0000FDC5DC /* NetworkService.swift */; };
 		737CC78529D25B1800FDC5DC /* EndpointInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC78429D25B1800FDC5DC /* EndpointInterface.swift */; };
 		737CC78729D25B2100FDC5DC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC78629D25B2100FDC5DC /* NetworkError.swift */; };
+		737CC78B29D25C0600FDC5DC /* SchoolList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC78A29D25C0600FDC5DC /* SchoolList.swift */; };
+		737CC78D29D25C0F00FDC5DC /* SchoolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC78C29D25C0F00FDC5DC /* SchoolListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		737CC78229D25B0000FDC5DC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		737CC78429D25B1800FDC5DC /* EndpointInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointInterface.swift; sourceTree = "<group>"; };
 		737CC78629D25B2100FDC5DC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		737CC78A29D25C0600FDC5DC /* SchoolList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolList.swift; sourceTree = "<group>"; };
+		737CC78C29D25C0F00FDC5DC /* SchoolListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +63,10 @@
 		737CC75A29D23BE600FDC5DC /* 20230327-KostiantynNevinchanyi-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				737CC75B29D23BE600FDC5DC /* _0230327_KostiantynNevinchanyi_NYCSchoolsApp.swift */,
 				737CC78129D25ADC00FDC5DC /* NetworkService */,
 				737CC77C29D2599300FDC5DC /* Models */,
-				737CC75B29D23BE600FDC5DC /* _0230327_KostiantynNevinchanyi_NYCSchoolsApp.swift */,
+				737CC78829D25BEF00FDC5DC /* Flow */,
 				737CC75F29D23BE800FDC5DC /* Assets.xcassets */,
 				737CC76129D23BE800FDC5DC /* Preview Content */,
 			);
@@ -93,6 +98,23 @@
 				737CC78429D25B1800FDC5DC /* EndpointInterface.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		737CC78829D25BEF00FDC5DC /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				737CC78929D25BF800FDC5DC /* SchoolList */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		737CC78929D25BF800FDC5DC /* SchoolList */ = {
+			isa = PBXGroup;
+			children = (
+				737CC78A29D25C0600FDC5DC /* SchoolList.swift */,
+				737CC78C29D25C0F00FDC5DC /* SchoolListViewModel.swift */,
+			);
+			path = SchoolList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +191,10 @@
 				737CC78029D259C300FDC5DC /* SatModel.swift in Sources */,
 				737CC78329D25B0000FDC5DC /* NetworkService.swift in Sources */,
 				737CC78729D25B2100FDC5DC /* NetworkError.swift in Sources */,
+				737CC78D29D25C0F00FDC5DC /* SchoolListViewModel.swift in Sources */,
 				737CC78529D25B1800FDC5DC /* EndpointInterface.swift in Sources */,
 				737CC77E29D259A400FDC5DC /* SchoolModel.swift in Sources */,
+				737CC78B29D25C0600FDC5DC /* SchoolList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -281,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
