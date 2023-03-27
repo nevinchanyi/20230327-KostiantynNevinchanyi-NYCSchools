@@ -8,5 +8,9 @@
 import Foundation
 
 struct SatModel: Decodable {
-    
+    let dbn: String
+    let numOfSatTestTakers: String
+    let satCriticalReadingAvgScore: String
+    let satMathAvgScore: String
+    let satWritingAvgScore: String
 }
