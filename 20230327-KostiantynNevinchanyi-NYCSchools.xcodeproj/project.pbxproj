@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		737CC75C29D23BE600FDC5DC /* _0230327_KostiantynNevinchanyi_NYCSchoolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC75B29D23BE600FDC5DC /* _0230327_KostiantynNevinchanyi_NYCSchoolsApp.swift */; };
-		737CC75E29D23BE600FDC5DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC75D29D23BE600FDC5DC /* ContentView.swift */; };
 		737CC76029D23BE800FDC5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 737CC75F29D23BE800FDC5DC /* Assets.xcassets */; };
 		737CC76329D23BE800FDC5DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 737CC76229D23BE800FDC5DC /* Preview Assets.xcassets */; };
+		737CC77E29D259A400FDC5DC /* SchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC77D29D259A400FDC5DC /* SchoolModel.swift */; };
+		737CC78029D259C300FDC5DC /* SatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC77F29D259C300FDC5DC /* SatModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		737CC75829D23BE600FDC5DC /* 20230327-KostiantynNevinchanyi-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20230327-KostiantynNevinchanyi-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		737CC75B29D23BE600FDC5DC /* _0230327_KostiantynNevinchanyi_NYCSchoolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0230327_KostiantynNevinchanyi_NYCSchoolsApp.swift; sourceTree = "<group>"; };
-		737CC75D29D23BE600FDC5DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		737CC75F29D23BE800FDC5DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		737CC76229D23BE800FDC5DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		737CC77D29D259A400FDC5DC /* SchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolModel.swift; sourceTree = "<group>"; };
+		737CC77F29D259C300FDC5DC /* SatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,8 @@
 		737CC75A29D23BE600FDC5DC /* 20230327-KostiantynNevinchanyi-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				737CC77C29D2599300FDC5DC /* Models */,
 				737CC75B29D23BE600FDC5DC /* _0230327_KostiantynNevinchanyi_NYCSchoolsApp.swift */,
-				737CC75D29D23BE600FDC5DC /* ContentView.swift */,
 				737CC75F29D23BE800FDC5DC /* Assets.xcassets */,
 				737CC76129D23BE800FDC5DC /* Preview Content */,
 			);
@@ -65,6 +67,15 @@
 				737CC76229D23BE800FDC5DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		737CC77C29D2599300FDC5DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				737CC77D29D259A400FDC5DC /* SchoolModel.swift */,
+				737CC77F29D259C300FDC5DC /* SatModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				737CC75E29D23BE600FDC5DC /* ContentView.swift in Sources */,
 				737CC75C29D23BE600FDC5DC /* _0230327_KostiantynNevinchanyi_NYCSchoolsApp.swift in Sources */,
+				737CC78029D259C300FDC5DC /* SatModel.swift in Sources */,
+				737CC77E29D259A400FDC5DC /* SchoolModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
