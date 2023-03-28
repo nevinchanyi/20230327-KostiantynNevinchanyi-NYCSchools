@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct SchoolDetailView: View {
     
@@ -13,10 +14,25 @@ struct SchoolDetailView: View {
     
     var body: some View {
         ScrollView {
+            if let location = viewModel.school.location {
+                Map(coordinateRegion:
+                        .constant(MKCoordinateRegion(
+                            center: CLLocationCoordinate2D(
+                                latitude: location.latitude,
+                                longitude: location.longitude),
+                            latitudinalMeters: 1000,
+                            longitudinalMeters: 1000)
+                        )
+                )
+                .frame(width: UIScreen.main.bounds.width, height: 200.0)
+            }
+            
+            
             Text(viewModel.school.schoolName)
                 .font(.title)
                 .bold()
             Text(viewModel.school.overviewParagraph ?? "")
+                .padding(.horizontal)
             
             HStack {
                 if let phoneNumber = viewModel.school.phoneNumber,
@@ -26,6 +42,8 @@ struct SchoolDetailView: View {
                     }
                 }
                 
+                /** Would be great to add `MFMailComposeViewController` and it's wrapper to
+                 implement email sending. */
                 if let schoolEmailUrl = viewModel.school.emailURL,
                    UIApplication.shared.canOpenURL(schoolEmailUrl) {
                     QuickActionButton(type: .envelope) {
@@ -37,7 +55,19 @@ struct SchoolDetailView: View {
                     viewModel.openMapApp()
                 }
             }
+            
+            VStack(alignment: .leading) {
+                Text("SAT")
+                    .bold()
+                ScoreView(text: "Math avg score", score: viewModel.school.sat?.satMathAvgScore)
+                ScoreView(text: "Writing avg score", score: viewModel.school.sat?.satWritingAvgScore)
+                ScoreView(text: "Critical Reading avg score", score: viewModel.school.sat?.satCriticalReadingAvgScore)
+            }
+            .padding()
+            
         }
+        .navigationTitle("Details")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -46,6 +76,21 @@ struct SchoolDetailView_Previews: PreviewProvider {
         SchoolDetailView(
             viewModel: SchoolDetailViewModel(school: Mock.school)
         )
+    }
+}
+
+
+struct ScoreView: View {
+    
+    var text: String
+    var score: String?
+    
+    var body: some View {
+        HStack {
+            Text(text)
+            Spacer()
+            Text(score ?? "N/A")
+        }
     }
 }
 

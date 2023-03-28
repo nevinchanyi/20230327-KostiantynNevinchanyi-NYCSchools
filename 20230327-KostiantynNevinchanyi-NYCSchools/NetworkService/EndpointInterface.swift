@@ -11,6 +11,9 @@ protocol EndpointInterface {
     var url: URL? { get }
 }
 
+/**
+ `Endpoint` represents endpoints for every request.
+ */
 enum Endpoint: EndpointInterface {
     case schools
     case sats

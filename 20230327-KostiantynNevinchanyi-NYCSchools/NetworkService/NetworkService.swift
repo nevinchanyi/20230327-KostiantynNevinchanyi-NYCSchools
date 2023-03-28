@@ -7,9 +7,10 @@
 
 import Foundation
 
-
+// MARK: Would be great to provide an interface for the `NetworkService` class
 final class NetworkService {
     
+    /** The method might be used for any request in the app, because it uses generic response */
     @discardableResult
     public func request<T>(
         endpoint: EndpointInterface,
