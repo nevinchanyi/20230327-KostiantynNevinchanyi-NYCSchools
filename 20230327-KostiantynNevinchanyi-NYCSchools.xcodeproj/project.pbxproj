@@ -17,6 +17,9 @@
 		737CC78729D25B2100FDC5DC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC78629D25B2100FDC5DC /* NetworkError.swift */; };
 		737CC78B29D25C0600FDC5DC /* SchoolList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC78A29D25C0600FDC5DC /* SchoolList.swift */; };
 		737CC78D29D25C0F00FDC5DC /* SchoolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC78C29D25C0F00FDC5DC /* SchoolListViewModel.swift */; };
+		737CC79029D25D0A00FDC5DC /* SchoolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC78F29D25D0A00FDC5DC /* SchoolDetail.swift */; };
+		737CC79229D25D1C00FDC5DC /* SchoolDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC79129D25D1C00FDC5DC /* SchoolDetailViewModel.swift */; };
+		737CC79429D25D2F00FDC5DC /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC79329D25D2F00FDC5DC /* Mock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		737CC78629D25B2100FDC5DC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		737CC78A29D25C0600FDC5DC /* SchoolList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolList.swift; sourceTree = "<group>"; };
 		737CC78C29D25C0F00FDC5DC /* SchoolListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewModel.swift; sourceTree = "<group>"; };
+		737CC78F29D25D0A00FDC5DC /* SchoolDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetail.swift; sourceTree = "<group>"; };
+		737CC79129D25D1C00FDC5DC /* SchoolDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewModel.swift; sourceTree = "<group>"; };
+		737CC79329D25D2F00FDC5DC /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			children = (
 				737CC77D29D259A400FDC5DC /* SchoolModel.swift */,
 				737CC77F29D259C300FDC5DC /* SatModel.swift */,
+				737CC79329D25D2F00FDC5DC /* Mock.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 		737CC78829D25BEF00FDC5DC /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				737CC78E29D25CDD00FDC5DC /* SchoolDetail */,
 				737CC78929D25BF800FDC5DC /* SchoolList */,
 			);
 			path = Flow;
@@ -115,6 +123,15 @@
 				737CC78C29D25C0F00FDC5DC /* SchoolListViewModel.swift */,
 			);
 			path = SchoolList;
+			sourceTree = "<group>";
+		};
+		737CC78E29D25CDD00FDC5DC /* SchoolDetail */ = {
+			isa = PBXGroup;
+			children = (
+				737CC78F29D25D0A00FDC5DC /* SchoolDetail.swift */,
+				737CC79129D25D1C00FDC5DC /* SchoolDetailViewModel.swift */,
+			);
+			path = SchoolDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737CC79429D25D2F00FDC5DC /* Mock.swift in Sources */,
 				737CC75C29D23BE600FDC5DC /* _0230327_KostiantynNevinchanyi_NYCSchoolsApp.swift in Sources */,
 				737CC78029D259C300FDC5DC /* SatModel.swift in Sources */,
 				737CC78329D25B0000FDC5DC /* NetworkService.swift in Sources */,
 				737CC78729D25B2100FDC5DC /* NetworkError.swift in Sources */,
 				737CC78D29D25C0F00FDC5DC /* SchoolListViewModel.swift in Sources */,
+				737CC79029D25D0A00FDC5DC /* SchoolDetail.swift in Sources */,
 				737CC78529D25B1800FDC5DC /* EndpointInterface.swift in Sources */,
+				737CC79229D25D1C00FDC5DC /* SchoolDetailViewModel.swift in Sources */,
 				737CC77E29D259A400FDC5DC /* SchoolModel.swift in Sources */,
 				737CC78B29D25C0600FDC5DC /* SchoolList.swift in Sources */,
 			);
