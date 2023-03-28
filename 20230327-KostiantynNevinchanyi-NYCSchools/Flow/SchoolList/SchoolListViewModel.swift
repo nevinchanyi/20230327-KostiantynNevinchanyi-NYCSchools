@@ -5,12 +5,18 @@
 //  Created by Kostiantyn Nevinchanyi on 3/27/23.
 //
 
-import Foundation
+import SwiftUI
 
 
 final class SchoolListViewModel: ObservableObject {
     
     let networkService: NetworkService
+    
+    @Published
+    var isLoading = false
+    
+    @Published
+    var errorText = String()
     
     @Published
     var schools = [SchoolModel]()
@@ -22,6 +28,10 @@ final class SchoolListViewModel: ObservableObject {
     
     func loadData() {
         Task {
+            await showAnimation(true)
+            await MainActor.run {
+                errorText = String()
+            }
             do {
                 let sats: [SatModel] = try await networkService.request(endpoint: Endpoint.sats)
                 var fetchedSchools: [SchoolModel] = try await networkService.request(endpoint: Endpoint.schools)
@@ -34,9 +44,20 @@ final class SchoolListViewModel: ObservableObject {
                 }
                 
                 await set(schools: fetchedSchools)
+                await showAnimation(false)
             } catch {
-                print(error)
+                await MainActor.run {
+                    errorText = error.localizedDescription
+                }
+                await showAnimation(false)
             }
+        }
+    }
+    
+    @MainActor
+    private func showAnimation(_ show: Bool) async {
+        withAnimation(.spring()) {
+            isLoading = show
         }
     }
     

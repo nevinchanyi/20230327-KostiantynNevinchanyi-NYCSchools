@@ -14,14 +14,33 @@ struct SchoolListView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.schools) { school in
-                NavigationLink {
-                    SchoolDetailView(
-                        viewModel: SchoolDetailViewModel(school: school))
-                } label: {
-                    Text(school.schoolName)
+            if viewModel.isLoading {
+                ProgressView()
+            } else if !viewModel.isLoading && !viewModel.errorText.isEmpty {
+                Section {
+                    Text("Oops, we can't load data.")
+                        .foregroundColor(.pink)
+                    Text(viewModel.errorText)
+                }
+                
+                Section {
+                    Button {
+                        viewModel.loadData()
+                    } label: {
+                        Text("Reload")
+                    }
+                }
+            } else {
+                ForEach(viewModel.schools) { school in
+                    NavigationLink {
+                        SchoolDetailView(
+                            viewModel: SchoolDetailViewModel(school: school))
+                    } label: {
+                        Text(school.schoolName)
+                    }
                 }
             }
+
         }
         .listStyle(.insetGrouped)
         .navigationTitle("NYC Schools")

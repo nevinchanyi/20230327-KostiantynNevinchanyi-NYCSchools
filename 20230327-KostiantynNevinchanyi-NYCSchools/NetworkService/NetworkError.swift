@@ -5,28 +5,32 @@
 //  Created by Kostiantyn Nevinchanyi on 3/27/23.
 //
 
-import Foundation
+import SwiftUI
 
-
-public enum NetworkError: Error {
+/**
+ `NetworkError` represents custom errors, that we want to show them users.
+ */
+ enum NetworkError: Error {
     case invalidURL
     case network(error: Error)
     case unexpectedStatusCode(code: Int)
     case noResponse
     case decoding(data: String)
-    
-    var description: String {
+}
+
+extension NetworkError: LocalizedError {
+    var errorDescription: String? {
         switch self {
         case .invalidURL:
-            return "Invelid url."
+            return NSLocalizedString("Invelid url.", comment: "")
         case .network(let error):
-            return "Network error: \(String(describing: error))."
+            return NSLocalizedString("Network error.\n\(error.localizedDescription)", comment: "")
         case .unexpectedStatusCode(let code):
-            return "Network error: status code - \(code)."
+            return NSLocalizedString("Unexpected status code - \(code)", comment: "")
         case .noResponse:
-            return "No response."
+            return NSLocalizedString("No response.", comment: "")
         case .decoding:
-            return "Decoding error."
+            return NSLocalizedString("Decoding error.", comment: "")
         }
     }
 }
