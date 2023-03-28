@@ -15,7 +15,12 @@ struct SchoolListView: View {
     var body: some View {
         List {
             ForEach(viewModel.schools) { school in
-                Text(school.schoolName)
+                NavigationLink {
+                    SchoolDetailView(
+                        viewModel: SchoolDetailViewModel(school: school))
+                } label: {
+                    Text(school.schoolName)
+                }
             }
         }
         .listStyle(.insetGrouped)

@@ -39,6 +39,10 @@ extension SchoolModel: Identifiable {
         }
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
+    var emailURL: URL? {
+        guard let schoolEmail = schoolEmail else { return nil }
+        return URL(string: "mailto:" + schoolEmail)
+    }
 }
 
 extension SchoolModel {
